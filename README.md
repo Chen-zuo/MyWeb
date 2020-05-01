@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 目录
 
 [TOC]
@@ -55,3 +56,7 @@ timeUpdata=()=>{
 
 ​	组件整好了，把初始化样式./common/init.css弄起，今天先把头部样式搞定。
 
+=======
+# MyWeb
+create by react
+>>>>>>> 81836b5101fb7c667857a2efb7b1fd7dbbc0e9e7
