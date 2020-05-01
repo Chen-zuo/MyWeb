@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../common/header/Header';
 import RouterMap from './RouterMap';
-import {Router} from 'react-router-dom';
-import {createBrowserHistory} from 'history';
+import {HashRouter} from 'react-router-dom';
+
 /**
  * header组件在此调用
  */
-const history=createBrowserHistory();
 
 class App extends Component {
     constructor(props) {
@@ -15,12 +14,12 @@ class App extends Component {
     }
     render() {
         return (
-            <Router history={history}>
+            <HashRouter >
                 <div className="main">
                     <Header/>
                     <RouterMap/> 
                 </div>
-            </Router>
+            </HashRouter>
         );
     }
 }

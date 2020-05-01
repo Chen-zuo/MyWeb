@@ -6,7 +6,7 @@ export default (loader)=>{
         Loadable({
             loader,
             loading(){
-                return <div>正在加载</div>
+                return <div>Sorry, there was a problem loading the page.</div>
             }
         })
     )

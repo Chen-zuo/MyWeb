@@ -6,7 +6,7 @@ class Notfind extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div>Sorry, there was a problem loading the page.</div>
         );
     }
 }
