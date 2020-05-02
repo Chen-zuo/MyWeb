@@ -6,7 +6,12 @@ class Work extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div>
+                <h2 style={{fontSize:'50px',color:'white',marginTop:'50px'}}>
+                    这里是W o r k
+                </h2>
+            </div>
+            
         );
     }
 }

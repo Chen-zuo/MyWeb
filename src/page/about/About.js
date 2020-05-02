@@ -7,7 +7,9 @@ class About extends Component {
     render() {
         return (
             <div>
-                <h2>这里是about</h2>
+                <h2 style={{fontSize:'50px',color:'white',marginTop:'50px'}}>
+                    这里是A b o u t
+                </h2>
             </div>
         );
     }

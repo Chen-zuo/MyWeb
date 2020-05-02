@@ -2,6 +2,7 @@ body, figure, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li,
 body, button, input, select, textarea { font:16px/1.5, "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif; } 
 h1, h2, h3, h4, h5, h6{ font-size:100%; } 
 address, cite, dfn, em, var { font-style:normal; } 
+body{    font-family: erikos,Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Hiragino Sans GB W3,WenQuanYi Micro Hei,sans-serif;}
 code, kbd, pre, samp { font-family:erikos,couriernew, courier, monospace; } 
 small{ font-size:12px; } 
 ul, ol { list-style:none; } 

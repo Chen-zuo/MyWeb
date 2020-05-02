@@ -12,9 +12,14 @@ class Home extends Component {
     render() {
         return (
             <main className="page">
-                <div className="common-center">
-                    <h2>这是主页Home</h2>
-                </div>
+                
+                    <h2 style={{fontSize:'50px',color:'white',marginTop:'50px'}}>
+                        Hey There,<br/>
+                        I'm Daozai.C
+                        <br/>
+                        ( σ'ω'σ) <br/># Skr
+                    </h2>
+                
             </main>
         );
     }

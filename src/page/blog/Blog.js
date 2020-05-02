@@ -6,7 +6,11 @@ class Blog extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div>
+                <h2 style={{fontSize:'50px',color:'white',marginTop:'50px'}}>
+                    这里是B l o g
+                </h2>
+            </div>
         );
     }
 }
