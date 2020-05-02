@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-### 目录
-
-[TOC]
-
-
 
 ### 快速食用
 
@@ -30,7 +24,7 @@ npm run start
 ​	
 
 ### day two
-
+文件位置：src/common/header/header.js 
 ​	主要整<header />组件，在src/App.js组件中引入<header />和路由组件<RouterMap/> 
 
 。头部中的时间可以自己写，
@@ -55,6 +49,20 @@ timeUpdata=()=>{
 在设置在componentDIdmount中实现每秒刷新，记得在componentWillUnmount时候要清楚定时器。不想自己写就用`Moment.js `时间格式化插件。
 
 ​	组件整好了，把初始化样式./common/init.css弄起，今天先把头部样式搞定。
+
+
+
+### day three
+
+文件位置：src/common/header/header.css	header.js
+
+​	先给header 中的a标签目录加上 ：hover下的状态，用到了伪元素::after 和相对定位。选中状态的话需要在组件加载时候和点击时候进行添加类名来实现选中。这两种样式都是用到了 `transition` 过渡
+
+​	header 的响应式布局主要用到了媒体查询`@media screen and(xxxxx){}`，手机和PC端出现了不两种样式状态。
+
+​	把时间标签实现了拖动，这个拖动特效实现了移动端的适配，移动端的响应事件有点不同，有兴趣可以百度一下。
+
+
 
 =======
 # MyWeb
