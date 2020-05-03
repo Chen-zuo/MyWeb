@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar/Navbar';
+import Footer from '../../common/footer/Footer';
 import './home.css';
 /**
  * 页面入口主组件
@@ -23,7 +24,7 @@ class Home extends Component {
                         </h2>
                         <Navbar/>
                 </main>
-                
+                <Footer/>
             </div>
 
         );

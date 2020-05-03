@@ -14,7 +14,7 @@ class Header extends Component {
         super(props);
         this.state = { 
             nav:[
-                {indent:true,text:'HOME',herf:'/',isLink:null},
+                {indent:false,text:'HOME',herf:'/',isLink:null},
                 {indent:false,text:'BLOG',herf:'/blog',isLink:null},
                 {indent:false,text:'WORK',herf:'/work',isLink:null},
                 {indent:false,text:'ABOUT',herf:'/about',isLink:null}
@@ -39,21 +39,14 @@ class Header extends Component {
           })
     }
 
-    //给a标签加hover
+    //组件挂载时候判断给a标签加选中状态
     isLink=()=>{
-        let tempList=this.state.nav;
-        tempList.forEach((val)=>{
-            if(val.indent===true){
-                val.isLink='isLink';
-            }else{
-                val.isLink=null;
-            }
-        });
-        this.setState({
-            nav:tempList
-        });
+        let paths = ['#/','#/blog','#/work','#/about'];
+        let path=this.props.history.location.hash;
+        let index=paths.indexOf(path)> -1 ? paths.indexOf(path) : 1
+        this.handleIndent(index);
     }
-
+    //点击时给a标签加选中状态
     handleIndent=(index)=>{
         this.state.nav.forEach((val)=>{
             val.indent=false;

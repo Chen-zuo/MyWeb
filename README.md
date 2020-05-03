@@ -2,7 +2,6 @@
 想了解或者建议可以加Q：348826240
 
 ### 快速食用
-
 ```shell
 //先下载 或者 用git工具 clone
 git clone https://github.com/ArthurYung/react-my-website.git
@@ -20,7 +19,6 @@ npm run start
 
 
 ### day one
-
 ​	第一天应该想了半天时间大概myweb有些个什么内容，早日打算计划生育。首先打算先把路由匹配起来，然后发现了新的点：**路由按需加载：**https://www.cnblogs.com/cckui/p/11492510.html	使用react-loadable实现代码分割，组件的异步加载。在项目中体现在src/route/RouterLoading.js
 
 ​	
@@ -55,7 +53,6 @@ timeUpdata=()=>{
 
 
 ### day three
-
 文件位置：src/common/header/header.css	header.js
 
 ​	先给header 中的a标签目录加上 ：hover下的状态，用到了伪元素::after 和相对定位。选中状态的话需要在组件加载时候和点击时候进行添加类名来实现选中。这两种样式都是用到了 `transition` 过渡
@@ -67,12 +64,22 @@ timeUpdata=()=>{
 
 
 ### day four
-
 文件位置：src/page/home/component/navbar	
 
 ​	主要是完成侧边栏的样式，用flex布局 真滴很方便，遇到的问题：1、react中img标签的src不能直接引用同级目录下的图片文件，需要把图片放在public做静态文件再引用，我直接放同级目录直接import 作为一个变量放在`src:{变量名}`。我把Navbar.js组件做了拆分，方便后面写相关的弹出窗口。
 
 ​	顺便写了一个Foot.js组件放在src/common中，遇到了许多细节问题：1、`html,body{height:100%}`可以让页面高度为屏幕显示高度。2、父子元素之间的margin边界重叠问题，解决办法很多要根据实际来。3、移动端点击元素可能会出现蓝色的背景框，给body加上css `-webkit-tap-highlight-``color``: ``transparent``;` `
+
+
+
+### day five
+调整一下css
+给navbar items选中时候上下跳动一下，用了css3动画，文字加上阴影看起来立体了很多。time、header也给个box-shadow，起码要看起来高级点。
+
+修改一下bug
+1、子页面刷新时候 总是HOME 被选中状态， 而不是当前页，用了一下history包`import {createBrowserHistory} from 'history';`，在根组件App.js中传值`const history=createBrowserHistory();`给子组件History.js再访问history.location.hash，Header.js组件加载完成的时候判断需要给哪个组件加上选中状态。
+
+2、footer的位置老是不好确定，刷新会出现在奇怪的地方，原因是页面高度设置的`body,html{heght:100%}`为屏幕可视区的高度。
 
 =======
 # MyWeb

@@ -6,7 +6,8 @@ body{
 .header{
     height: 36px;
     background-color: #fff;
-    border-bottom: 2px solid #111;
+    border-bottom: 1px solid #111;
+    box-shadow: 1px 0px 15px black;
 }
 
 
@@ -95,11 +96,12 @@ body{
         position: fixed;
         font-size: 20px;
         left: 15px;
-        top: 90%;
+        top: 61.8%;
         color: #000;
         font-family: -webkit-body;
         border: 2px dashed gray;
         border-radius: 25px;
+        box-shadow: 3px 3px 3px black;
     }
     .header .nav a{
         font-size: 12px;

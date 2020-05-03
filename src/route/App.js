@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Header from '../common/header/Header';
 import RouterMap from './RouterMap';
 import {HashRouter} from 'react-router-dom';
-import Footer from '../common/footer/Footer';
+import {createBrowserHistory} from 'history';
+const history=createBrowserHistory();
 /**
  * 控制整个单页面大体结构
  */
@@ -16,10 +17,9 @@ class App extends Component {
         return (
             <HashRouter >
                 <div className="main">
-                    <Header/>
+                    <Header history = {history} />
                     <RouterMap/> 
                 </div>
-                <Footer/>
             </HashRouter>
         );
     }

@@ -1,8 +1,9 @@
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left:50%;
     transform: translate(-50%);
+    font-size: 14px;
 }
 
 footer a {
