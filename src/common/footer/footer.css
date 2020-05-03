@@ -1,0 +1,11 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%);
+}
+
+footer a {
+    color:darkblue;
+    margin-left:10px ;
+}

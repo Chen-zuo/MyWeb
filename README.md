@@ -1,4 +1,6 @@
 
+想了解或者建议可以加Q：348826240
+
 ### 快速食用
 
 ```shell
@@ -63,6 +65,14 @@ timeUpdata=()=>{
 ​	把时间标签实现了拖动，这个拖动特效实现了移动端的适配，移动端的响应事件有点不同，有兴趣可以百度一下。
 
 
+
+### day four
+
+文件位置：src/page/home/component/navbar	
+
+​	主要是完成侧边栏的样式，用flex布局 真滴很方便，遇到的问题：1、react中img标签的src不能直接引用同级目录下的图片文件，需要把图片放在public做静态文件再引用，我直接放同级目录直接import 作为一个变量放在`src:{变量名}`。我把Navbar.js组件做了拆分，方便后面写相关的弹出窗口。
+
+​	顺便写了一个Foot.js组件放在src/common中，遇到了许多细节问题：1、`html,body{height:100%}`可以让页面高度为屏幕显示高度。2、父子元素之间的margin边界重叠问题，解决办法很多要根据实际来。3、移动端点击元素可能会出现蓝色的背景框，给body加上css `-webkit-tap-highlight-``color``: ``transparent``;` `
 
 =======
 # MyWeb

@@ -87,6 +87,7 @@ body{
     position: absolute;
     top: 5px;
     right: 0;
+    z-index: 999;
 }
 
 @media screen and (max-width:500px){
@@ -95,7 +96,7 @@ body{
         font-size: 20px;
         left: 15px;
         top: 90%;
-        color: #fff;
+        color: #000;
         font-family: -webkit-body;
         border: 2px dashed gray;
         border-radius: 25px;

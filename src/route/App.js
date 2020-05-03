@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Header from '../common/header/Header';
 import RouterMap from './RouterMap';
 import {HashRouter} from 'react-router-dom';
-
+import Footer from '../common/footer/Footer';
 /**
- * header组件在此调用
+ * 控制整个单页面大体结构
  */
 
 class App extends Component {
@@ -19,6 +19,7 @@ class App extends Component {
                     <Header/>
                     <RouterMap/> 
                 </div>
+                <Footer/>
             </HashRouter>
         );
     }

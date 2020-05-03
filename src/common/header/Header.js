@@ -58,8 +58,18 @@ class Header extends Component {
         this.state.nav.forEach((val)=>{
             val.indent=false;
         });
-        this.state.nav[index].indent=true;
-        this.isLink();
+        let tempList=this.state.nav;
+        tempList[index].indent=true;
+        tempList.forEach((val)=>{
+            if(val.indent===true){
+                val.isLink='isLink';
+            }else{
+                val.isLink=null;
+            }
+        });
+        this.setState({
+            nav:tempList
+        });
     }
 
     //给time添加拖拽，方法还要适配移动端
@@ -114,7 +124,7 @@ class Header extends Component {
                         })}
                     </nav>
                     <div className ="timer">
-                        <a href="https://github.com/ChenzuozZZ"><img src={git} alt=""/></a>
+                        <a href="https://github.com/Chen-zuo"><img src={git} alt=""/></a>
                         <time 
                             onMouseDown={this.handleDarg}
                             onTouchStart={this.handleDargMob}
