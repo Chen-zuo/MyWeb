@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './readme.css'
 class Readme extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,7 @@ class Readme extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div className="readme">Read me</div>
         );
     }
 }

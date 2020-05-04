@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './sup.css';
 class Sup extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,7 @@ class Sup extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div className="sup">S u p</div>
         );
     }
 }

@@ -1,0 +1,18 @@
+.figure-enter {
+    opacity: 0.1;
+    transform:translate(-50%,-50%) scale(0.1) ;
+  }
+  .figure-enter-active {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1) ;
+    transition: all 150ms ease-out;
+  }
+  .figure-exit {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1) ;
+  }
+  .figure-exit-active {
+    opacity: 0.01;
+    transform: translate(-50%,-50%) scale(1) ;
+    transition: all 150ms ease-in;
+  }

@@ -46,17 +46,17 @@ class Navbar extends Component {
         let tempList=this.state.figures;
         tempList.map(val=>val.isShow=false);
         tempList[index].isShow=true;
-        this.setState={
+        this.setState({
             figures:tempList
-        }
+        })
     }
 
     close=()=>{
         let tempList=this.state.figures;
         tempList.map(val=>val.isShow=false);
-        this.setState={
+        this.setState({
             figures:tempList
-        }
+        })
     }
 
     render() {
@@ -67,7 +67,7 @@ class Navbar extends Component {
                         <NavItems
                             key={key}
                             show={this.show.bind(this,val)}
-                            close = {this.close.bind(this)}
+                            close={this.close.bind(this)}
                             {...val}
                         />
                     )

@@ -81,6 +81,33 @@ timeUpdata=()=>{
 
 2、footer的位置老是不好确定，刷新会出现在奇怪的地方，原因是页面高度设置的`body,html{heght:100%}`为屏幕可视区的高度。
 
+
+
+### day six
+你嘛一个地方写错了，我找了一天 整整一天啊，我TM心态崩了啊，它不报错就是没反应，我最后一点一点看代码才发现真是悲伤的故事。是下面这个写法，你能知道哪儿错了么？淦。
+
+```js
+show=(n)=>{
+        let index = this.state.figures.indexOf(n);
+        let tempList=this.state.figures;
+        tempList.map(val=>val.isShow=false);
+        tempList[index].isShow=true;
+        this.setState={
+            figures:tempList
+        }
+        console.log('执行了Show()，父组件更新')
+        console.log(tempList[index].isShow);
+    }
+```
+
+发现了一个地方 父组件render后，默认触发了子组件render，子组件又会触发子子组件render， 但是这不会使得react有多低效 ， 而重渲染的性能开销主要是更新DOM导致的，最后diff算法会介入，决定是否要真正更新DOM 。 shouldComponentUpdate回调函数，让程序员根据情况决定是否决定是否要重render本组件 。
+
+navitems.js组件加入了弹窗，弹窗的实现这里用到了react-transition-group中
+
+[CSSTransition]: https://blog.csdn.net/scorpio_h/article/details/85205579?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2
+
+实现加入弹窗DOM节点。或者用className去控制隐藏和显示弹窗DOM节点。这里用到了父子组件传值 传方法有些小技巧。用map的时候 bind传值给方法的时候把val传进去，再用indexof可以得到index。
+
 =======
 # MyWeb
 create by react
