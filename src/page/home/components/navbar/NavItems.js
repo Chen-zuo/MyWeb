@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {CSSTransition} from 'react-transition-group';
-import './navbar.css';
+// import './navbar.css';
 
 class NavItems extends Component {  
           
@@ -30,7 +30,7 @@ class NavItems extends Component {
                     unmountOnExit
                     classNames="figure"
                 >    
-                        <Component   close={this.props.close}/>
+                    <Component   close={this.props.close}/>
                 </CSSTransition>
             </div>
         );
