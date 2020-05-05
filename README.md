@@ -102,11 +102,47 @@ show=(n)=>{
 
 发现了一个地方 父组件render后，默认触发了子组件render，子组件又会触发子子组件render， 但是这不会使得react有多低效 ， 而重渲染的性能开销主要是更新DOM导致的，最后diff算法会介入，决定是否要真正更新DOM 。 shouldComponentUpdate回调函数，让程序员根据情况决定是否决定是否要重render本组件 。
 
-navitems.js组件加入了弹窗，弹窗的实现这里用到了react-transition-group中
-
-[CSSTransition]: https://blog.csdn.net/scorpio_h/article/details/85205579?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2
-
+navitems.js组件加入了弹窗，弹窗的实现这里用到了react-transition-group中的CSSTransition
+**CSSTransition：**https://blog.csdn.net/scorpio_h/article/details/85205579?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2
 实现加入弹窗DOM节点。或者用className去控制隐藏和显示弹窗DOM节点。这里用到了父子组件传值 传方法有些小技巧。用map的时候 bind传值给方法的时候把val传进去，再用indexof可以得到index。
+
+
+### day seven
+实现了点击navbar 里的元素实现弹窗，接下来就是写弹窗组件了，最有意思的就是CSS HTML了，明明没啥东西还把你整够呛，那个删除按钮真是炫炫炫，用before/after 伪元素写的
+
+```css
+.close a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    left: 12px;
+    top: 3px;
+    width: 1px;
+    height: 20px;
+}
+.close a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    left: 3px;
+    top: 12px;
+    width: 20px;
+    height: 1px;
+}
+```
+动画和2D 3D转换要多整啊，哎。
+
+
+
+### day eight
+​	点赞 、说明、留言板的基本样式和功能实现。
+
+CSS动画参数要弄懂：https://blog.csdn.net/chritina/article/details/99623017
+
+overflow：scroll样式可以设置：https://blog.csdn.net/czy279470138/article/details/99650743
+
 
 =======
 # MyWeb

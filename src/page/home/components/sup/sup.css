@@ -5,11 +5,11 @@
     transform: translate(-50%,-50%);
     height: 300px;
     width: 500px;
-    background-color: pink;
     border:5px solid #fff;
     border-radius: 25px;
     box-shadow: 0 2px 5px black;
     overflow: hidden;
+    background: url(./sup.gif);
 }
 
 
@@ -26,7 +26,6 @@
 .sup .sup-close{
     background-color:#fff;
     border-bottom: 1px solid darkgray;
-    
 }
 
 

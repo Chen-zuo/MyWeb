@@ -2,7 +2,7 @@ html,body{
     height: 100%;
 }
 .page{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding-top:50px;
     position: relative;
@@ -32,14 +32,13 @@ html,body{
     z-index: 99;
     position: relative;
 }
-
 @keyframes figure-animate 
 {
     0%{transform: translateY(0)}
     25%{transform: translateY(-6px)}
-      50%{transform: translateY(0)}
-      75%{transform: translateY(-4px)}
-      100%{transform: translateY(0)}
+    50%{transform: translateY(0)}
+    75%{transform: translateY(-4px)}
+    100%{transform: translateY(0)}
 }
 
 .navbar figure figcaption{
@@ -59,6 +58,7 @@ html,body{
     }
 }
 
+/* navitems弹窗动画 */
 .figure-enter {
     opacity: 0.1;
     transform:translate(-50%,-50%) scale(0.1) ;
@@ -76,4 +76,65 @@ html,body{
     opacity: 0.01;
     transform: translate(-50%,-50%) scale(1) ;
     transition: all 150ms ease-in;
+  }
+  
+
+/* Home字体 */
+.text{
+    font-size: 106px;
+    color:#ffff;
+    line-height: 1.2;
+    padding-top: 54px;
+    font-weight: bolder;
+    color: rgba(255,255,255,0);
+}
+@media screen and (max-width: 1440px) {
+    .text{
+        font-size: 96px
+    }
+  }
+  
+  @media screen and (max-width: 960px) {
+    .text{
+        font-size: 80px
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .text{
+        font-size: 60px
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .text{
+        font-size: 42px;
+        padding-top: 80px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .text{
+        font-size: 32px;
+        padding-top: 80px;
+    }
+  }
+
+.textAnimate{
+    animation: textAnimate 0.8s ease-in-out forwards;
+}
+
+  @keyframes textAnimate{
+    0%{
+      color: rgba(255,255,255,0);
+    }
+    20%{
+        color: rgba(255,255,255,0.2);
+    }
+    40%{
+      color:rgba(255,255,255,0.5);
+    }
+    60%{
+      color:rgba(255,255,255,0.8);
+    }
+    100%{
+      color: rgba(255,255,255,1);
+    }
   }

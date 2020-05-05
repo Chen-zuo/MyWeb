@@ -8,7 +8,7 @@ class NavItems extends Component {
     handleShow=(close,show)=>{
         let open=new Promise(resolve=>{
             close();
-            setTimeout(resolve,100);
+            setTimeout(resolve,250);
         });
         open.then(()=>show());
     }

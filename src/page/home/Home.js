@@ -7,21 +7,48 @@ import './home.css';
  */
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
+    constructor() {
+        super()
+        this.state = {
+          span1:false,
+          span2:false,
+          span3:false   
+        }
+      }
+
+    componentDidMount(){
+        this.setTimeout1 = setTimeout(()=>{
+          this.setState({
+            span1:true
+          })
+        },300)
+        this.setTimeout2 = setTimeout(()=>{
+          this.setState({
+            span2:true
+          })
+        },800)
+        this.setTimeout3 = setTimeout(()=>{
+          this.setState({
+            span3:true
+          })
+        },1300)
+      }
+      componentWillUnmount(){
+        clearTimeout(this.setTimeout1)
+        clearTimeout(this.setTimeout2)
+        clearTimeout(this.setTimeout3)
+      }
+
+
     render() {
         return (
             <div className="wrapper">
                 <main className="page">
-
-                        <h2 style={{fontSize:'50px',color:'white',marginTop:'50px'}}>
-                            Hey There,<br/>
-                            I'm Daozai.C
-                            <br/>
-                            ( σ'ω'σ) <br/># Skr
-                        </h2>
+                        <div className="text">
+                           <span className={this.state.span1?'textAnimate':null}> Hey There,<br/> </span>
+                           <span className={this.state.span2?'textAnimate':null}>  I'm Mr.Z <br/></span>
+                           <span className={this.state.span3?'textAnimate':null}>( σ'ω'σ) <br/>  # Skr</span>
+                        </div>
                         <Navbar/>
                 </main>
                 <Footer/>

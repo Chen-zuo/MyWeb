@@ -7,7 +7,16 @@ class Readme extends Component {
     }
     render() {
         return (
-            <div className="readme">Read me</div>
+            <div className="readme">
+                <div className="readme-close">
+                    <p>
+                        <a title="关闭" onClick={()=>this.props.close()}></a>
+                                说明
+                    </p>
+                </div>
+                <div className="bear"></div>
+                <p className="bear-text">JUST DO IT.</p>
+            </div>
         );
     }
 }

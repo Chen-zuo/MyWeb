@@ -3,4 +3,129 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    height: 400px;
+    width: 700px;
+    border:5px solid #fff;
+    border-radius: 25px;
+    background:url(./bearbg.png) dimgrey;
+    box-shadow: 0 2px 5px black;
+    overflow: hidden;
 }
+
+
+
+@media screen and (max-width:1000px){
+    .readme{
+        height: 280px;
+        width: 520px;
+    }
+    .readme .bear-text{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:580px){
+    .readme{
+        height: 250px;
+        width: 450px;
+    }
+    .readme .bear-text{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .readme{
+        width: 320px;
+    }
+    .readme .bear-text{
+        font-size: 24px;
+    }
+}
+
+
+.readme .readme-close{
+    background-color:#fff;
+    border-bottom: 1px solid darkgray;
+    
+}
+
+.readme-close p{
+    text-align: center;
+    color: dimgray;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.readme-close a{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    background-color: #f95f56;
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.readme-close a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    left: 12px;
+    top: 3px;
+    width: 1px;
+    height: 20px;
+}
+.readme-close a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    left: 3px;
+    top: 12px;
+    width: 20px;
+    height: 1px;
+}
+
+.bear-text{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.bear{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    bottom: 35%;
+    background: url(./bear.png) no-repeat;
+    animation: bear-run 0.9s steps(8) infinite, bear-move 2.5s  forwards;
+
+}
+@keyframes bear-move{
+    0%{
+        left: -40%;
+    }
+    100%{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@keyframes bear-run{
+    0%{
+        background-position:0 0;
+    }
+    100%{
+        background-position: -1600px 0;
+    }
+}
+
+
+

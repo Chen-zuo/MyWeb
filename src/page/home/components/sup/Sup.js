@@ -8,12 +8,27 @@ class Sup extends Component {
          };
     }
 
+
+    componentDidMount(){
+        let tempnum =JSON.parse(localStorage.getItem('num'));
+        if(tempnum){
+            this.setState({
+                num:tempnum
+            })
+        }
+    }
+    componentWillUnmount(){
+        let tempnum=this.state.num;
+        tempnum++;
+        localStorage.setItem('num',JSON.stringify(tempnum));
+    }
+
     render() {
         return (
             <div className="sup">
                 <div className="sup-close">
                     <p>
-                        <a title="点赞" onClick={()=>this.props.close()}></a>
+                        <a title="关闭" onClick={()=>this.props.close()}></a>
                         点赞
                     </p>
                 </div>
@@ -22,7 +37,7 @@ class Sup extends Component {
                         Thank
                     </div>
                     <div className="num">
-                        {this.state.num}+1
+                        {this.state.num} + 1
                     </div>
                 </div>
             </div>

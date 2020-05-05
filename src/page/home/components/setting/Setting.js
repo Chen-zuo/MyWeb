@@ -8,7 +8,13 @@ class Setting extends Component {
     render() {
         return (
             <div className="setting">
-                Seting
+                <div className="setting-close">
+                    <p>
+                        <a title="关闭" onClick={()=>this.props.close()}></a>
+                        设置
+                    </p>
+                </div>
+                <h2>setting功能制作中</h2>
             </div>
         );
     }
