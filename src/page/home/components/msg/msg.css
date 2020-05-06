@@ -158,3 +158,46 @@
     box-shadow: none;
 }
 
+
+/* 弹出nickname设置框 */
+.nickname-enter {
+    opacity: 0.1;
+    transform:translate(-50%,-50%) scale(0.1) ;
+  }
+  .nickname-enter-active {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1) ;
+    transition: all 150ms ease-out;
+  }
+  .nickname-exit {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1) ;
+  }
+  .nickname-exit-active {
+    opacity: 0.01;
+    transform: translate(-50%,-50%) scale(1) ;
+  }
+
+.msg .nickname{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 2px 5px black;
+    overflow: hidden;    
+    border-radius: 13px;
+    background-color: #f95f56;
+    color: #fff;
+}
+
+.nickname input{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 36px;    
+}
+
+.nickname span{
+    margin-left: 10px;
+}
