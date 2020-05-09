@@ -14,7 +14,7 @@ class Header extends Component {
         super(props);
         this.state = { 
             nav:[
-                {indent:false,text:'HOME',herf:'/',isLink:null},
+                {indent:true,text:'HOME',herf:'/',isLink:null},
                 {indent:false,text:'BLOG',herf:'/blog',isLink:null},
                 {indent:false,text:'WORK',herf:'/work',isLink:null},
                 {indent:false,text:'ABOUT',herf:'/about',isLink:null}
@@ -43,7 +43,7 @@ class Header extends Component {
     isLink=()=>{
         let paths = ['#/','#/blog','#/work','#/about'];
         let path=this.props.history.location.hash;
-        let index=paths.indexOf(path)> -1 ? paths.indexOf(path) : 1
+        let index=paths.indexOf(path)> -1 ? paths.indexOf(path) : 0
         this.handleIndent(index);
     }
     //点击时给a标签加选中状态

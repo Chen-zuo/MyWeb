@@ -166,7 +166,6 @@ class Msg extends Component {
                 <div className="comment-send">
                     <div className="comment-container">
                         <input 
-                            autoFocus="aotufocus"  
                             ref={this.input}
                             placeholder="说点什么吧"
                             onKeyUp={this.handleMsgEnter}/>
