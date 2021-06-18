@@ -3,6 +3,8 @@
 入门的同学可以勉强写着玩
 
 
+响应式的页面，手机打开不同哟～
+
 ### 快速食用
 ```shell
 //先下载 或者 用git工具 clone
@@ -15,8 +17,6 @@ npm install
 //运行
 npm run start
 ```
-
-这里有一个地方要注意，做项目的时候npm安包有时候在package.json中没有相关信息，所以npm install之后还是报错没有找到Moudle，原来是因为我安装包的时候命令用了cnpm 导致了没有相关信息，我又重新装了一遍，所以大家自己做项目时候千万注意写正规的语句  最好加上 -s -d，觉得npm慢就用 nrm改用淘宝镜像。
 
 
 
@@ -146,7 +146,4 @@ CSS动画参数要弄懂：https://blog.csdn.net/chritina/article/details/996230
 overflow：scroll样式可以设置：https://blog.csdn.net/czy279470138/article/details/99650743
 
 
-=======
-# MyWeb
-create by react
->>>>>>> 81836b5101fb7c667857a2efb7b1fd7dbbc0e9e7
+
